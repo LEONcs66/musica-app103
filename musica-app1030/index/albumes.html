@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Álbumes</title>
+    <link rel="stylesheet" href="css/style_alb.css">
+</head>
+<body>
+    <header>
+        <h1>🎵 Álbumes Musicales 🎵</h1>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="canciones.php">Canciones</a>
+            <a href="colecciones.php">Colecciones</a>
+        </nav>
+    </header>
+
+    <main>
+       
+
+        <section class="formulario">
+            <h2>Agregar nuevo álbum</h2>
+            <form action="php/album/agregar_album.php" method="POST">
+                <label for="titulo">Título del álbum:</label>
+                <input type="text" id="titulo" name="titulo" required>
+
+                <label for="anio">Año:</label>
+                <input type="number" id="anio" name="anio" required>
+
+                <button type="submit">Guardar álbum</button>
+            </form>
+        </section>
+
+        <hr style="margin: 40px 0; border-color: #444;">
+
+        <section>
+            <h2 style="text-align: center; color: #1db954;">Listado de Álbumes</h2>
+            <div id="contenedor-albumes" class="albumes-container">
+                <iframe src="php/album/listar_albumes.php" width="100%" height="600px" style="border: none;"></iframe>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
